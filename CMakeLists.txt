@@ -15,7 +15,7 @@ else()
     message(FATAL_ERROR 'OpenGL not found')    
 endif()
 
-find_package(GLAD CONFIG REQUIRED)
+find_package(GLAD REQUIRED)
 
 if(GLAD_FOUND)
     message('Glad founded')    
@@ -39,5 +39,5 @@ target_sources(${PROJECT_NAME}
 
 target_include_directories(${PROJECT_NAME} PUBLIC include)
 target_include_directories(${PROJECT_NAME} PUBLIC ${OPENGL_INCLUDE_DIR})
-target_link_libraries(${PROJECT_NAME} ${OPENGL_LIBRARIES})
+target_link_libraries(${PROJECT_NAME} PUBLIC ${OPENGL_LIBRARIES})
 target_link_libraries(${PROJECT_NAME} PUBLIC glad)
