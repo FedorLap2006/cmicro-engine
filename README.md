@@ -1,2 +1,2 @@
-# cmicro-engine
-C version of the Micro Game Engine 
+# micro-engine
+The Micro Game Engine.
